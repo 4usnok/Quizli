@@ -19,7 +19,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false
 
 # Установка зависимостей
-RUN poetry install --without dev --no-interaction --no-ansi --no-root
+RUN poetry install --without lint,test --no-interaction --no-ansi --no-root
 
 # Копирование всего проекта
 COPY . .
