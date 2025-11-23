@@ -10,7 +10,7 @@ services:
     ports:
       - "8005:8000"
     depends_on:
-      - db:
+      - db
     env_file:
       - .env
 
