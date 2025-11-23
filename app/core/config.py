@@ -13,7 +13,7 @@ NAME_DB = os.getenv("NAME_DB")
 
 # URL для подключения к PostgreSQL
 async_postgresql_url = (
-    f"postgresql+asyncpg://{USERNAME_DB}:{PASSWORD_DB}@localhost:5432/{NAME_DB}"
+    f"postgresql+asyncpg://{USERNAME_DB}:{PASSWORD_DB}@db:5432/{NAME_DB}"
 )
 
 # движок SQLAlchemy
