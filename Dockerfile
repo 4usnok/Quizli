@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install poetry
 
 # Назначение рабочей директории
-WORKDIR /quizli
+WORKDIR /app
 
 # Копирование файлов зависимостей
 COPY pyproject.toml poetry.lock ./
@@ -28,4 +28,4 @@ COPY . .
 EXPOSE 8000
 
 # Команды для запуска
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -3,10 +3,10 @@ version: '3.9'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
     volumes:
-      - .:/code
-      - static_volume:/code/static
+      - .:/app
+      - static_volume:/app/static
     ports:
       - "8005:8000"
     depends_on:
