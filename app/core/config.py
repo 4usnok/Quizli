@@ -10,10 +10,11 @@ load_dotenv()
 USERNAME_DB = os.getenv("USERNAME_DB")
 PASSWORD_DB = os.getenv("PASSWORD_DB")
 NAME_DB = os.getenv("NAME_DB")
+HOST_DB = os.getenv("HOST_DB")
 
 # URL для подключения к PostgreSQL
 async_postgresql_url = (
-    f"postgresql+asyncpg://{USERNAME_DB}:{PASSWORD_DB}@localhost:5432/{NAME_DB}"
+    f"postgresql+asyncpg://{USERNAME_DB}:{PASSWORD_DB}@{HOST_DB}:5432/{NAME_DB}"
 )
 
 # движок SQLAlchemy
