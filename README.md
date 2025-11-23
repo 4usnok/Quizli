@@ -68,7 +68,7 @@ poetry install
 1. Создание ВМ происходит на Yandex Cloud по адресу:  
 `console.yandex.cloud/`  
 2. Подключение к ВМ:  
-`ssh -l kilyaka 158.160.189.40`  
+`ssh -l kilyaka 158.160.179.36`  
 
 Шаг 2. Перед подключением к ВМ, необходимо убедиться, что все пакеты имеют актуальные версии, 
 а система имеет рабочее состояние  
@@ -111,7 +111,7 @@ https://docs.docker.com/engine/install/ubuntu/
 
 Шаг 1. Подключение к ВМ 
 В `Bash` или `Powershell` необходимо ввести команду:  
-`ssh -l nik 158.160.22.79`  
+`ssh -l kilyaka 158.160.179.36`  
 
 Шаг 2. Клонирование репозитория:  
 команда -> `git clone https://github.com/4usnok/Quizli.git`  
